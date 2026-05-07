@@ -1,9 +1,9 @@
-import NavBar from "../components/NavBar";
+import PageNavBar from "../components/PageNavBar";
 
 function Product() {
   return (
     <div>
-      <NavBar />
+      <PageNavBar />
       <h1>Product</h1>
     </div>
   );

@@ -1,10 +1,13 @@
-import NavBar from "../components/NavBar";
+import { NavLink } from "react-router-dom";
+import PageNavBar from "../components/PageNavBar";
 
 function Homepage() {
   return (
     <div>
-      <NavBar />
-      <h1>WorldWise</h1>
+      <PageNavBar />
+      <h1>
+        <NavLink to="/app">Go to app</NavLink>
+      </h1>
     </div>
   );
 }

@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
+import styles from "./PageNavBar.module.css";
 
-function NavBar() {
+function PageNavBar() {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul>
         <li>
           <NavLink to="/">Home</NavLink>
@@ -18,4 +19,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default PageNavBar;
