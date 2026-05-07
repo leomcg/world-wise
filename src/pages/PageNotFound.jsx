@@ -1,12 +1,12 @@
 import NavBar from "../components/NavBar";
 
-function Homepage() {
+function PageNotFound() {
   return (
     <div>
       <NavBar />
-      <h1>WorldWise</h1>
+      <h1>Not found :(</h1>
     </div>
   );
 }
 
-export default Homepage;
+export default PageNotFound;
