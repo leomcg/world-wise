@@ -10,7 +10,6 @@ function CountryList({ cities, isLoading }) {
       JSON.stringify({ country: city.country, emoji: city.emoji }),
     ),
   );
-  console.log(countriesUnique);
   const countries = [...countriesUnique].map((country) => JSON.parse(country));
 
   if (isLoading) return <Spinner />;
@@ -22,7 +21,7 @@ function CountryList({ cities, isLoading }) {
   return (
     <ul className={styles.countryList}>
       {countries?.map((country) => (
-        <CountryItem country={country} key={country.id} />
+        <CountryItem country={country} key={country.country} />
       ))}
     </ul>
   );
