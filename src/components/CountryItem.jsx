@@ -1,16 +1,10 @@
+import { emojiToPNG } from "../contexts/CitiesProvider";
 import styles from "./CountryItem.module.css";
-
-const flagemojiToPNG = (flag) => {
-  var countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
-    .map((char) => String.fromCharCode(char - 127397).toLowerCase())
-    .join("");
-  return `https://flagcdn.com/24x18/${countryCode}.png`;
-};
 
 function CountryItem({ country }) {
   return (
     <li className={styles.countryItem}>
-      <img src={flagemojiToPNG(country.emoji)} alt="" />
+      <img src={emojiToPNG(country.emoji)} alt="" />
       <span>{country.country}</span>
     </li>
   );
