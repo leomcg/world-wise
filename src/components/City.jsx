@@ -1,8 +1,8 @@
+import { useEffect } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import styles from "./City.module.css";
 import { emojiToPNG, useCities } from "../contexts/CitiesProvider";
 import Spinner from "./Spinner";
-import { useEffect } from "react";
 import BackButton from "./BackButton";
 
 const formatDate = (date) =>
@@ -14,15 +14,19 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function City() {
+  console.log("City component rendered");
   const { isLoading, currentCity, getCity } = useCities();
 
   const { id } = useParams();
+  console.log("ID", id);
 
   useEffect(() => {
+    console.log("hello");
     getCity(id);
-  }, [id]);
+  }, []);
 
-  const { cityName, emoji, date, notes } = currentCity;
+  console.log("*", currentCity);
+  const { cityName, emoji, date, notes } = currentCity || {};
 
   if (isLoading) return <Spinner />;
 

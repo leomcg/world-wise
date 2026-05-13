@@ -32,6 +32,7 @@ function CitiesProvider({ children }) {
   }, []);
 
   const getCity = async (id) => {
+    console.log("getCity: ", id);
     try {
       setIsLoading(true);
       const res = await fetch(`${BASE_URL}/cities/${id}`);
